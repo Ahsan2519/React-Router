@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+.navbar,
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+gap:40px
+}
+
+.navbar h1 {
+    cursor: pointer;
+  padding: 0 8px;
+}
+
+.navbar ul li {
+  padding: 10px 40px;
+  list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+}
