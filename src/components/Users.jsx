@@ -8,6 +8,7 @@ const Users = () => {
   const usersUrl = `https://dummyjson.com/user/${params.id}`;
 
   useEffect(() => {
+      // eslint-disable-next-line
     fetchUser();
   }, []);
   const fetchUser = async () => {
@@ -18,7 +19,7 @@ const Users = () => {
         console.log(userData);
         setinitial(userData);
       } else {
-        throw `sorry ${userResponse.status} bad request`;
+        throw Error(`sorry ${userResponse.status} bad request`);
       }
     } catch (error) {
       console.log(error);

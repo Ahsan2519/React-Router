@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const User = () => {
   const [users, setusers] = useState([]);
   useEffect(() => {
+     // eslint-disable-next-line
     fechData();
   }, []);
   const fechData = async () => {
@@ -14,7 +15,7 @@ const User = () => {
         const data = await response.json();
         setusers(data);
       } else {
-        throw `sorry ${response.status} bad request`;
+        throw Error(`sorry ${response.status} bad request`);
       }
     } catch (error) {
       console.log(error);
