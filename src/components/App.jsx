@@ -1,11 +1,11 @@
 // import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import User from "./User";
-
+import Users from "./Users";
 const App = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const App = () => {
           <Route exact path="/about" element={<About />}/>
           <Route exact path="/contact" element={<Contact />}/>
           <Route exact path="/user" element={<User />}/>
+          <Route exact path="/users/:id" element={<Users/>}/>
         </Routes>
     </>
   );
