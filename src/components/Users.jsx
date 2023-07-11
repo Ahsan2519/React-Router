@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const Users = () => {
   const params = useParams();
-  console.log(params)
+  const location = useLocation();
+  // console.log(location.state)
+  // console.log(params)
   const [initial, setinitial] = useState([]);
   const usersUrl = `https://dummyjson.com/user/${params.id}`;
 
@@ -29,6 +31,7 @@ const Users = () => {
         <div className="detail">
           <h1>{initial?.id}</h1>
           <p>{initial?.image}</p>
+          <p>My age is {location.state}</p>
         </div>
   );
 };
