@@ -44,3 +44,18 @@ padding-left: 30px;
 .detail p {
   padding-left: 20px;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding:  7px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
